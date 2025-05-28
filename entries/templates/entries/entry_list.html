@@ -1,6 +1,11 @@
 {% extends "layout.html" %}
 {% block body %}
   <h2>Your Journal Entries</h2>
+
+  <p>
+    <a href="{% url 'entries:entry_create' %}" class="btn btn-primary">Add New Entry</a>
+  </p>
+
   <ul class="entry-list">
     {% for entry in entries %}
       <li>

@@ -25,3 +25,6 @@ class Entry(models.Model):
 
     def __str__(self): #if portrayed in a string, it returns the entry's title
         return self.title
+    
+    class Meta:
+        ordering = ['-date']

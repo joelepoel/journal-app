@@ -27,4 +27,4 @@ class Entry(models.Model):
         return self.title
     
     class Meta:
-        ordering = ['-date']
+        ordering = ['-date'] #Orders the dates backwards, so new entries with newer dates are added on top

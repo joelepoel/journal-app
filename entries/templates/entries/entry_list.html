@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Your Journal Entries</h2>
+  <ul class="entry-list">
+    {% for entry in entries %}
+      <li>
+        <strong>{{ entry.date|date:"F j, Y" }}</strong> — 
+        <a href="{% url 'entries:entry_detail' entry.pk %}">
+          {{ entry.title }}
+        </a>
+      </li>
+    {% empty %}
+      <p>No entries yet.</p>
+    {% endfor %}
+  </ul>
+{% endblock %}

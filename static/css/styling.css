@@ -1,0 +1,126 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e2f;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-left h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Avatar */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+/* Page Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Footer */
+footer.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #eee;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Post card styling */
+.post-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.post-card h3 {
+    margin-top: 0;
+}
+
+.post-actions {
+    text-align: right;
+}
+
+.post-actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #1e1e2f;
+    font-weight: bold;
+}
+
+/* Profile card */
+.profile-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    max-width: 400px;
+}
+
+.avatar-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+}
+
+.entry-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.entry-list li {
+    margin-bottom: 10px;
+}
+
+.entry-list a {
+    text-decoration: none;
+    color: #1e1e2f;
+    font-weight: bold;
+}
+
+.entry-list a:hover {
+    text-decoration: underline;
+}

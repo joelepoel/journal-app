@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Journal</title>
+    <link rel="stylesheet" href="{% static 'css/styling.css' %}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <h1><a href="{% url 'entries:entry_list' %}">My Journal</a></h1>
+        </div>
+        <div class="navbar-right">
+            <div class="navbar-right">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'entries:entry_list' %}">
+                    <img src="{{ request.user.profile.avatar.url|default:'/media/defaults/default.jpg' }}"
+                        alt="Avatar"
+                        class="avatar">
+                </a>
+                    <a href="{% url 'account_details' %}" class="nav-link">User Settings</a>
+                    <a href="{% url 'entries:edit_profile' %}" class="nav-link">Profile Settings</a>
+                    <a href="{% url 'logout' %}" class="logout-link">Logout</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                    <a href="{% url 'register' %}">Register</a>
+                {% endif %}
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+        {% block body %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Journal App</p>
+    </footer>
+</body>
+</html>

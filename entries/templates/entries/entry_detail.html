@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2>{{ object.title }}</h2>
+<p>{{ object.description }}</p>
+<img src="{{ object.image.url }}" alt="{{object.title}}">
+<br>
+<a href="{% url 'entries:entry_update' object.pk %}">edit</a>
+<a href="{% url 'entries:entry_confirm_delete' object.pk %}">delete</a>
+<a href="{% url 'entries:entry_list' %}">back</a>
+{% endblock %}

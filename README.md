@@ -19,7 +19,7 @@ Setup Instructions
 
 1. Clone the repository
 
-   git clone https://github.com/yourusername/journal-project.git
+   git clone https://github.com/joelepoel/journal-app.git
    cd journal-project
 
 2. Install dependencies using Pipenv and running:

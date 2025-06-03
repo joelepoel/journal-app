@@ -22,7 +22,7 @@ def account_details(request):
         form = UserForm(request.POST, instance=request.user, user=request.user)
         if form.is_valid():
             form.save()
-            return redirect('profile') #Redirects to profile page
+            return redirect('entry_list') #Redirects to journal entry list page
     else:
         form = UserForm(instance=request.user, user=request.user)
 

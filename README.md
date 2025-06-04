@@ -27,6 +27,8 @@ Setup Instructions
     pipenv install
     pipenv shell
 
+    to exit virtual environment, run: exit
+
 3. Create and configure your MySQL database
 
     Manually create a MySQL database.
@@ -59,8 +61,10 @@ Setup Instructions
 
         Visit http://127.0.0.1:8000/ in your browser.
 
+        Ctrl + C to stop server
+
 Notes
 
-    This project uses Pipenv for dependency management. Python and Django versions are handled automatically through the Pipfile.
+    This project uses Pipenv for dependency management. Python and Django versions and all used libraries are handled automatically through the Pipfile.
 
-    Uploaded images will be saved in the media/ folder unless configured otherwise.
+    Uploaded images will be saved in the media/ folder unless configured otherwise in settings.py.

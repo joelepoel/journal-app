@@ -4,6 +4,6 @@ from django.conf import settings
 from .models import Profile
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
-def create_profile(sender, instance, created, **kwargs):
+def create_profile(sender, instance, created, **kwargs): #Creates Profile model when a new User model is created.
     if created:
         Profile.objects.create(user=instance)

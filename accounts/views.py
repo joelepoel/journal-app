@@ -3,7 +3,7 @@ from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from .forms import UserForm, CustomUserCreationForm
 
-def register(request):
+def register(request): #Creates User model for registered user.
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
@@ -17,7 +17,7 @@ def register(request):
 
     
 @login_required
-def account_details(request):
+def account_details(request): #To read and edit account details
     if request.method == 'POST':
         form = UserForm(request.POST, instance=request.user, user=request.user)
         if form.is_valid():
